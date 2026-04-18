@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hack Pulse // Onboarding</title>
+  <meta name="description" content="Hack Pulse — where the signal cuts through the noise. Onboarding for the cybersecurity collective." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700;800&family=Space+Grotesk:wght@500;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <canvas id="matrix" aria-hidden="true"></canvas>
+  <div class="scanlines" aria-hidden="true"></div>
+  <div class="vignette" aria-hidden="true"></div>
+
+  <header class="topbar" id="topbar" hidden>
+    <div class="topbar-left">
+      <button class="icon-btn back-btn" id="backBtn" aria-label="Back">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="15 18 9 12 15 6"></polyline>
+        </svg>
+      </button>
+      <div class="brand-mini">
+        <span class="brand-glyph">▸</span>
+        <span class="brand-name">hack<span class="accent">_</span>pulse</span>
+      </div>
+      <span class="topbar-sep">/</span>
+      <span class="topbar-crumb" id="crumb">init</span>
+    </div>
+    <div class="topbar-right">
+      <div class="xp-pill" id="xpPill">
+        <span class="xp-val" id="xpVal">0</span>
+        <span class="xp-label">XP</span>
+      </div>
+    </div>
+  </header>
+
+  <main id="app" class="app"></main>
+
+  <footer class="sysbar" aria-hidden="true">
+    <span class="sys-item"><span class="dot live"></span> uplink stable</span>
+    <span class="sys-item">lat: <span id="sysLat">12</span>ms</span>
+    <span class="sys-item">node: hp-<span id="sysNode">--</span></span>
+    <span class="sys-item">ts: <span id="sysTs">--:--:--</span></span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
